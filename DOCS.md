@@ -57,8 +57,11 @@ a new line.
 
 Returns the product of its operands using the Karatsuba algorithm.
 
+If the first operand's used capacity is greater than the second's,
+the smaller one will be reallocated, similarly in the opposite case.
+
 In theory this should perform better, however it seems my implementation is not
-up to par, since `bn_mul`, which uses long multiplication is faster.
+up to par, since `bn_mul`, which uses long multiplication, is faster.
 
 ## `bn_fact_karatsuba`
 
